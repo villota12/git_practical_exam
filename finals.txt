@@ -1,0 +1,24 @@
+cd desktop
+mkdir git_practical_exam
+cd git_practical_exam
+git init
+git remote add origin https://github.com/villota12/git_practical_exam.git
+git remote -v
+echo -e 'Name: Frank Edward A. Villota \nExam Date: December 07, 2024' >> student_info.txt
+git commit -m "Initial Commit: Added student_info.txt"
+git push --set-upstream origin master
+echo -e 'Favorite Git Command: Git Clone' >> student_info.txt
+git add student_info.txt
+git commit -m "Updated student_info.txt with favorite Git command"
+git checkout -b feature-bio
+echo About Me: \nI am learning Git for version control. >> bio.txt
+git add bio.txt
+git commit -m "Added bio.txt"
+git push --set-upstream feature-bio
+ git push --set-upstream origin feature-bio
+git push
+git push --set-upstream origin feature-bio
+git checkout master
+git merge feature-bio
+git pull origin master
+doskey /history >> finals.txt
